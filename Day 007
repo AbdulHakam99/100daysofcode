@@ -1,0 +1,14 @@
+contacts = [
+    ("John",47),
+    ("Emma",28),
+    ("Harry",33),
+    ("Ann",35),
+    ]
+
+name = input("Enter Name: ")
+for i in contacts:
+    if i[0]==name:
+        print(f"{name} is {i[1]}")
+        break
+else:
+    print("Not Found")
