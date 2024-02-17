@@ -12,3 +12,20 @@ for i in contacts:
         break
 else:
     print("Not Found")
+
+
+#Dictionary method###########################################
+contacts = [
+    ("John",47),
+    ("Emma",28),
+    ("Harry",33),
+    ("Ann",35),
+    ]
+
+name = input("Enter Name: ")
+contacts=dict(contacts)
+age=contacts.get(name)
+if age is not None:
+    print(f"{name} is {age}")
+else:
+    print("Not Found")
