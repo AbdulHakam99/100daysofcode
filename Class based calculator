@@ -1,0 +1,86 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Practice
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            while (true)
+            {
+                Console.Write("Enter 1st number: ");
+                float input1 = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Enter 2nd number: ");
+                float input2 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine(@"
+        1. Addition (+)
+        2. Substraction(-)
+        3. Division(/)
+        4. Multiplication(*)");
+                Console.WriteLine();
+
+                Console.WriteLine("Choose a operation");
+                int operant = Convert.ToInt32(Console.ReadLine());
+
+                if (operant == 1)
+                {
+                    Calculation c = new Calculation();
+                    c.Add(input1, input2);
+                }
+
+                else if (operant == 2)
+                {
+                    Calculation c = new Calculation();
+                    c.Subtract(input1, input2);
+                }
+                else if (operant == 3)
+                {
+                    Calculation c = new Calculation();
+                    c.Division(input1, input2);
+                }
+                else if (operant == 4)
+                {
+                    Calculation c = new Calculation();
+                    c.Muliplication(input1, input2);
+                }
+                
+                else
+                {
+                    Console.WriteLine("Invalid range");
+                }
+            }//End of while
+        }
+    }//End of class Program
+}
+class Calculation
+{
+    public void Add(float input1, float input2)
+    {
+        float total = input1 + input2;
+       Console.WriteLine("Total: "+total);
+    }
+
+    public void Subtract(float input1, float input2)
+    {
+        float total = input1 - input2;
+        Console.WriteLine("Total: " + total);
+    }
+
+    public void Muliplication(float input1, float input2)
+    {
+        float total = input1 * input2;
+        Console.WriteLine("Total: " + total);
+    }
+
+    public void Division(float input1, float input2)
+    {
+        float total = input1 / input2;
+        Console.WriteLine("Total: " + total);
+    }
+
+}
